@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="mark.via.gp" platformBuildVersionCode="20181207" platformBuildVersionName="3.5.0">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <application android:allowBackup="true" android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize" android:fullBackupContent="@xml/a" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/ba" android:name="mark.via.ui.browser.BrowserApp" android:networkSecurityConfig="@xml/b" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher" android:supportsRtl="true" android:theme="@style/e" android:windowSoftInputMode="adjustPan">
+        <meta-data android:name="android.max_aspect" android:value="2.5"/>
+        <activity android:alwaysRetainTaskState="true" android:configChanges="keyboard|keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize" android:label="@string/ba" android:launchMode="singleTask" android:name="mark.via.ui.activity.BrowserActivity" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/c"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.APP_BROWSER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="about"/>
+                <data android:scheme="javascript"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="file"/>
+                <data android:scheme="inline"/>
+                <data android:mimeType="text/html"/>
+                <data android:mimeType="text/markdown"/>
+                <data android:mimeType="text/mht"/>
+                <data android:mimeType="text/mhtml"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="application/xhtml+xml"/>
+                <data android:mimeType="application/vnd.wap.xhtml+xml"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.WEB_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="mark.via.ui.setting.CloudSettings2"/>
+        <activity android:name="mark.via.ui.setting.SkinSettings"/>
+        <activity android:name="mark.via.ui.setting.ScriptSettings"/>
+        <activity android:name="mark.via.ui.setting.OperationSettings"/>
+        <activity android:name="mark.via.ui.setting.AdvancedSettings"/>
+        <activity android:name="mark.via.ui.setting.BlockSettings"/>
+        <activity android:name="mark.via.ui.setting.AddonsSettings"/>
+        <activity android:name="mark.via.ui.setting.GeneralSettings"/>
+        <activity android:name="mark.via.ui.setting.PrivacySettings"/>
+        <activity android:name="mark.via.ui.setting.SettingsCatalog"/>
+        <activity android:name="mark.via.ui.setting.DevSettings"/>
+        <activity android:name="mark.via.ui.activity.FileBrowser"/>
+        <activity android:name="mark.via.ui.activity.CrashActivity" android:process=":error_activity"/>
+        <provider android:authorities="mark.via.gp.database" android:exported="true" android:label="@string/g" android:multiprocess="false" android:name="mark.via.database.BookmarksProvider"/>
+    </application>
+</manifest>

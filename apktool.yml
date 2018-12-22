@@ -1,0 +1,24 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: via_browser_fast_light_geek_best_choice_v3.5.0.apk
+compressionType: false
+doNotCompress:
+- arsc
+- png
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '9'
+  targetSdkVersion: '28'
+sharedLibrary: false
+sparseResources: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.3.4-dirty
+versionInfo:
+  versionCode: '20181207'
+  versionName: 3.5.0
